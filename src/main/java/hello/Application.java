@@ -22,9 +22,9 @@ public class Application {
 
 }
 
-public class CustomContainer implements EmbeddedServletContainerCustomizer {
+public class Application implements EmbeddedServletContainerCustomizer {
     @Override
-    public void customize(ConfigurableEmbeddedServletContainer container) {
+    public void main(ConfigurableEmbeddedServletContainer container) {
         container.setPort(8080);
     }
 }
