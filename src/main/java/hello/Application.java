@@ -15,10 +15,7 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(Application.class, args);
-        app.setDefaultProperties(Application
-          .singletonMap("server.port", "9090"));
-        app.run(args);
+        SpringApplication.run(Application.class, args);   
     }
 
 }
