@@ -17,8 +17,10 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-        container.setPort(8080);
+        SpringApplication app = new SpringApplication(Application.class, args);
+        app.setDefaultProperties(Collections
+          .singletonMap("server.port", "9090"));
+        app.run(args);
     }
 
 }
