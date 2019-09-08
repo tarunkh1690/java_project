@@ -18,13 +18,7 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-    }
-
-}
-
-public class Application implements EmbeddedServletContainerCustomizer {
-    @Override
-    public void main(ConfigurableEmbeddedServletContainer container) {
         container.setPort(8080);
     }
+
 }
