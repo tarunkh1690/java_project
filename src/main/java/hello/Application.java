@@ -15,18 +15,8 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);   
+        SpringApplication.run(Application.class, args); 
+        server.setPort(9090);
     }
-
-}
-
-
-@Component
-public class CustomizationPort implements WebServerFactoryCustomizer < ConfigurableServletWebServerFactory > {
-
- @Override
- public void customize(ConfigurableServletWebServerFactory server) {
-  server.setPort(9090);
- }
 
 }
